@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>属于我们的小小宇宙</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 欢迎页面 -->
+    <div id="welcome-screen">
+        <div class="welcome-content">
+            <h1>欢迎来到</h1>
+            <h2>"yyq和187的小小宇宙"</h2>
+            <button id="enter-btn">进入宇宙</button>
+        </div>
+        <!-- 自适应背景照片 -->
+        <div class="welcome-bg"></div>
+    </div>
+    
+    <div id="scene-container"></div>
+    <div id="countdown"></div>
+    
+    <!-- 特殊星星文字容器 -->
+    <div id="special-text"></div>
+    
+    <!-- 照片容器 -->
+    <div id="photo-container">
+        <img src="assets/photos/a(1).jpg" alt="照片">
+    </div>
+
+    <!-- 引入 Three.js -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+    <!-- 引入自定义脚本（移除隧道相关脚本） -->
+    <script src="js/stars.js"></script>
+    <script src="js/countdown.js"></script>
+    <script src="js/music.js"></script>
+    <script src="js/themeSwitcher.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

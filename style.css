@@ -1,0 +1,181 @@
+/* 全局变量定义 */
+:root {
+    --starry-gradient: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 50%, #0a0e27 100%);
+    --twilight-gradient: linear-gradient(135deg, #1a2a6c 0%, #b21f1f 50%, #fdbb2d 100%);
+    --galaxy-gradient: linear-gradient(135deg, #24243e 0%, #302b63 50%, #0f0c29 100%);
+    --aurora-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #667eea 100%);
+}
+
+/* 基础样式重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+    margin: 0;
+    background: var(--starry-gradient);
+    transition: background 1s ease;
+}
+
+#scene-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* 欢迎页面样式 */
+#welcome-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    overflow: hidden;
+    transition: opacity 1s ease;
+}
+
+/* 自适应背景照片 */
+.welcome-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('assets/photos/a(1).jpg'); /* 欢迎页背景图 */
+    background-size: cover; /* 自适应屏幕 */
+    background-position: center; /* 居中显示 */
+    filter: brightness(0.7); /* 调暗以便文字显示 */
+}
+
+.welcome-content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+#welcome-screen h1 {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    margin-bottom: 20px;
+    text-shadow: 0 0 15px rgba(0,0,0,0.8);
+    color: white;
+}
+
+#welcome-screen h2 {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    margin-bottom: 40px;
+    text-shadow: 0 0 15px rgba(0,0,0,0.8);
+    color: white;
+}
+
+#enter-btn {
+    padding: 15px 30px;
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    background: rgba(255,255,255,0.2);
+    border: 2px solid white;
+    border-radius: 30px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#enter-btn:hover {
+    background: rgba(255,255,255,0.3);
+    transform: scale(1.05);
+}
+
+/* 倒计时样式 - 左上角悬浮 */
+#countdown {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 10; /* 确保在星空上方显示 */
+    color: white;
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    text-shadow: 0 0 10px rgba(255,255,255,0.8);
+    padding: 10px 15px;
+    background: rgba(0,0,0,0.3);
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+}
+
+/* 特殊文字容器样式（支持换行） */
+#special-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    color: white;
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    text-align: center;
+    text-shadow: 0 0 15px rgba(255,255,255,0.8);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    max-width: 80%; /* 限制最大宽度以触发换行 */
+    padding: 20px;
+    word-wrap: break-word; /* 自动换行 */
+    font-family: "Microsoft YaHei", sans-serif;
+}
+
+/* 照片容器样式 */
+#photo-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    max-width: 80%;
+    max-height: 80%;
+}
+
+#photo-container img {
+    max-width: 100%;
+    max-height: 80vh;
+    border: 3px solid white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255,255,255,0.3);
+}
+
+/* 视频容器样式 */
+#video-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    max-width: 90%;
+    height: auto;
+    border: 3px solid white;
+    border-radius: 10px;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 20;
+    pointer-events: none;
+}
+
+#video-container video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 隐藏播放音乐按钮 */
+#play-music {
+    display: none;
+}
