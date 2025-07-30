@@ -5,11 +5,14 @@ let mouse = new THREE.Vector2();
 // 内容数据：文字、图片、视频的混合集合
 const contentData = [
   // 文字内容
-  { type: 'text', value: '星河滚烫<br>你是人间理想' },
-  { type: 'text', value: '宇宙浪漫<br>我们不散' },
-  { type: 'text', value: '相遇是银河赠我的糖' },
-  { type: 'text', value: '你眼里有整个宇宙' },
+  { type: 'text', value: '爱意多于昨天<br>但远不及明天' },
+  { type: 'text', value: '爱本无定义<br>但你是唯一' },
+  { type: 'text', value: '小得盈满<br>爱逢其时' },
+  { type: 'text', value: '幸福降临昊琪' },
   { type: 'text', value: '187 & yyq 99' },
+  { type: 'text', value: '187 & yyq 99' },
+  { type: 'text', value: '187 & yyq 99' },
+  { type: 'text', value: '我爱你<br>在我每次望向你' },
   // 图片内容
   { type: 'image', value: 'assets/photos/a(1).jpg' },
   { type: 'image', value: 'assets/photos/a(2).jpg' },
@@ -17,6 +20,11 @@ const contentData = [
   { type: 'image', value: 'assets/photos/a(4).jpg' },
   { type: 'image', value: 'assets/photos/a(5).jpg' },
   { type: 'image', value: 'assets/photos/a(6).jpg' },
+  { type: 'image', value: 'assets/photos/a(7).jpg' },
+  { type: 'image', value: 'assets/photos/a(8).jpg' },
+  { type: 'image', value: 'assets/photos/a(9).jpg' },
+  { type: 'image', value: 'assets/photos/a(10).jpg' },
+  { type: 'image', value: 'assets/photos/a(11).jpg' },
   // 视频内容
   { type: 'video', value: 'assets/videos/video1.mp4' },
   { type: 'video', value: 'assets/videos/video2.mp4' },
