@@ -30,7 +30,6 @@ const contentData = [
   { type: 'video', value: 'assets/videos/video2.mp4' },
   { type: 'video', value: 'assets/videos/video3.mp4' }
 ];
-
 // 星空配色方案集合
 const gradients = [
   'var(--starry-gradient)',
@@ -218,13 +217,8 @@ function showVideo(src) {
       alert('请点击视频开始播放');
     });
     
-    // 视频结束后隐藏
-    const hideTimer = setTimeout(() => {
-      hideVideo();
-    }, 5000);
-    
+    // 仅在视频结束时隐藏
     video.onended = () => {
-      clearTimeout(hideTimer);
       hideVideo();
     };
   };
