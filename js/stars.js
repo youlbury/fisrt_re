@@ -67,7 +67,7 @@ const starColors = [
   
   // 创建星星
   for (let i = 0; i < 1200; i++) {
-    const size = Math.random() * 0.05 + 0.02;
+    const size = Math.random() * 0.1 + 0.02;
     const geometry = new THREE.SphereGeometry(size, 16, 16);
     const color = starColors[Math.floor(Math.random() * starColors.length)];
     const material = new THREE.MeshBasicMaterial({ color });
